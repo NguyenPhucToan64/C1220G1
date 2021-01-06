@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_bien_du_lieu_va_toan_tu_B2</title>
+</head>
+<body>
+Độ C là : <input type="text" id="do_C" onchange="doi_sang_doF()">
+<p id="hienthi"></p>
+<script>
+    function doi_sang_doF() {
+        var do_C = document.getElementById("do_C").value;
+        var do_F=do_C*1.8+32;
+        // document.write("Độ F là "+do_F)
+        document.getElementById("hienthi").innerText= "ĐỘ F là " + do_F;
+
+    }
+</script>
+</body>
+</html>

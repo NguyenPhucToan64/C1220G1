@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="so_1"> <input type="text" id="so_2"> <br><br>
+    <input type="button" value="cong" onclick="phep_cong()">
+    <input type="button" value="tru" onclick="phep_tru()">
+    <input type="button" value="nhan" onclick="phep_nhan()">
+    <input type="button" value="chia" onclick="phep_chia()">
+    <p id="result">Result</p>
+
+<script>
+    function phep_cong() {
+            ketqua=parseInt(document.getElementById("so_1").value) + parseInt(document.getElementById("so_2").value);
+            document.getElementById("result").innerHTML="Result : "+ketqua;
+    }
+    function phep_tru() {
+        ketqua=parseInt(document.getElementById("so_1").value) - parseInt(document.getElementById("so_2").value);
+        document.getElementById("result").innerHTML="Result : "+ketqua;
+    }
+    function phep_nhan() {
+        ketqua=parseInt(document.getElementById("so_1").value) * parseInt(document.getElementById("so_2").value);
+        document.getElementById("result").innerHTML="Result : "+ketqua;
+    }
+    function phep_chia() {
+        ketqua=parseInt(document.getElementById("so_1").value) / parseInt(document.getElementById("so_2").value);
+        document.getElementById("result").innerHTML="Result : "+ketqua;
+    }
+
+</script>
+
+</body>
+</html>

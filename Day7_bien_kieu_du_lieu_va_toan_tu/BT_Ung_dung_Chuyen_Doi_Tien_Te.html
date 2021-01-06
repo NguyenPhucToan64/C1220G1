@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung_dung_chuyen_doi_tien_te</title>
+</head>
+<body>
+ <form>
+     A mount <input type="text" id="so_tien">
+     From Currency <select id="loai_tien_1">
+         <option value="VND">VietNam</option>
+         <option value="USD">USD</option>
+     </select>
+     To currency <select id="loai_tien_2">
+         <option value="VND">VietNam</option>
+         <option value="USD">USD</option>
+     </select>
+     <input type="button" onclick="chuyen_doi_tien_te()" value="Convert">
+     <p id="result">Result </p>
+ </form>
+<script>
+function chuyen_doi_tien_te() {
+              loaitien1=document.getElementById("loai_tien_1").value;
+              loaitien2=document.getElementById("loai_tien_2").value;
+            var tygia;
+            switch (loaitien1) {
+                case "VND":
+                    switch(loaitien2) {
+                        case "VND": tygia=1;break;
+                        case "USD": tygia=1/23000;break;
+                    } break;
+                case "USD":
+                    switch (loaitien2) {
+                        case "VND": tygia=23000; break;
+                        case "USD": tygia=1;break;
+                    } break;
+            }
+           so_Nhap =document.getElementById("so_tien").value;
+            quy_Doi = so_Nhap*tygia;
+    document.getElementById("result").innerText="Result : "+quy_Doi;
+}
+</script>
+</body>
+</html>
