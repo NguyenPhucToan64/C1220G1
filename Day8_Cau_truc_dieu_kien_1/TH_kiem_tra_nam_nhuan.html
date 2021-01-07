@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH_kiem_tra_nam_nhuan</title>
+</head>
+<body>
+<script>
+    let year=parseInt(prompt("Nhập một năm bất kì"));
+    let isLeapyear= false;
+    let isDivisibleBy4=(year%4==0)
+    if(isDivisibleBy4) {
+        let isDivisibleBy100=(year%100==0)
+        if(isDivisibleBy100){
+            let isDivisibleBy400=(year%400==0)
+            if(isDivisibleBy400){
+                isLeapyear= true;
+            }
+        } else {
+            isLeapyear= true;
+        }
+    }
+    if(isLeapyear) {
+        alert(year +"is a Leap year")
+    } else {
+        alert(year+"is not a Leap year")
+    }
+
+</script>
+</body>
+</html>
